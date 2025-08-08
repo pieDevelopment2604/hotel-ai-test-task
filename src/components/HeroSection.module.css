@@ -1,0 +1,332 @@
+.hero {
+  background: linear-gradient(135deg, #f8fbff 0%, #e6f3ff 100%);
+  padding: 120px 0 80px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(0, 120, 212, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(16, 110, 190, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  max-width: 600px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 120, 212, 0.1);
+  color: #0078d4;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(0, 120, 212, 0.2);
+}
+
+.badgeIcon {
+  font-size: 1.1rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 1.5rem 0;
+  background: linear-gradient(135deg, #0078d4, #106ebe, #0066b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  display: block;
+  font-size: 2.5rem;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+.description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.talkButton {
+  margin-bottom: 3rem;
+}
+
+.talkToAssistant {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+}
+
+.talkToAssistant:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(16, 185, 129, 0.4);
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.ctaPrimary {
+  background: linear-gradient(135deg, #0078d4, #106ebe);
+  color: white;
+  box-shadow: 0 8px 25px rgba(0, 120, 212, 0.3);
+}
+
+.ctaPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(0, 120, 212, 0.4);
+}
+
+.ctaSecondary {
+  background: white;
+  color: #0078d4;
+  border: 2px solid #0078d4;
+}
+
+.ctaSecondary:hover {
+  background: #0078d4;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.ctaIcon {
+  font-size: 1.2rem;
+}
+
+.stats {
+  display: flex;
+  gap: 2rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.statNumber {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0078d4;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phoneDemo {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 30px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    inset 0 2px 4px rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+}
+
+.phoneScreen {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.callInterface {
+  text-align: center;
+  color: white;
+}
+
+.avatar {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.callStatus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #4ade80;
+}
+
+.pulse {
+  width: 8px;
+  height: 8px;
+  background: #4ade80;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+.waveform {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 4px;
+  height: 60px;
+}
+
+.wave {
+  width: 4px;
+  background: linear-gradient(to top, #0078d4, #4ade80);
+  border-radius: 2px;
+  animation: wave 1.5s ease-in-out infinite;
+}
+
+.wave:nth-child(1) { animation-delay: 0s; }
+.wave:nth-child(2) { animation-delay: 0.1s; }
+.wave:nth-child(3) { animation-delay: 0.2s; }
+.wave:nth-child(4) { animation-delay: 0.3s; }
+.wave:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes wave {
+  0%, 100% { height: 10px; }
+  50% { height: 40px; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 0 60px;
+    min-height: auto;
+  }
+  
+  .container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 2rem;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+  }
+  
+  .ctaGroup {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .talkButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .talkToAssistant {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+  
+  .ctaPrimary,
+  .ctaSecondary {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+  
+  .stats {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .phoneDemo {
+    width: 250px;
+    height: 400px;
+    transform: none;
+  }
+}
